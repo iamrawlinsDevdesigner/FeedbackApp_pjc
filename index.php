@@ -38,9 +38,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <!-- Submit button for the form -->
             <input type="submit" value="Submit">
         </form>
-        <!-- Paragraph to display feedback message -->
-        <p id="response"><?php echo $feedback; ?></p>
     </div>
+
+    <!-- Modal popup for feedback message -->
+    <div id="feedbackModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <p id="modalMessage"><?php echo $feedback; ?></p>
+        </div>
+    </div>
+
     <!-- Link to the JavaScript file -->
     <script src="script.js"></script>
 </body>
